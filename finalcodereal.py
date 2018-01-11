@@ -6,12 +6,14 @@ character = input("What is your name? ")
 print(f"{character} wakes up in a room blindfolded and tied to a chair. The room is empty and there is a door on the other side of the room. This is your chance to escape. The first thing you have to do is take off your blindfold.")
 
 
+class questions(object):
+    def __init__(self, q_text, a_text):
+        self.question == q_text
+        self.answer == a_text
+questions= [ Question1('What is the capitol of New Jersey','trenton')
+question2('Who won the 2001 superbowl', 'ravens')
+question3('
+]
 
-answer_1 = "Trenton".lower()
-while question_1 != answer_1:
-    question_1 = input("What is the capitol of New Jersey? ")
-    if question_1!= Trenton:
-        print("Your answer is wrong. You remain in the seat blindfolded. Try again.")
-    else:
-        print("Congragulations! you have now successfully removed your blindfold!")
+
 
