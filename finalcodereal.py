@@ -44,55 +44,60 @@ question9 = 'Tony winner Ben Platt starred in what Broadway Show in the last yea
 answer9 = 'dear evan hansen'
 riddle9 = {'question' : question9 , 'answer' : answer9, 'escapesentence' : 'The pin is a perfect fit! You jump back as the mirror wall swings open to reveal yet another room!'}
 
-question10 = '
-answer10 =
-riddle10 = {'question' : question10 , 'answer' : answer10, 'escapesentence' :
+question10 = 'Who was the first superhero created?'
+answer10 = 'superman'
+riddle10 = {'question' : question10 , 'answer' : answer10, 'escapesentence' : 'You step into yet another room and the door slams shut behind you. You are in pitch dark. YOu hold your hand up to your face and can not see it through the darkness. The first step is to find any source of light.'}
 
-question11 =
-answer11 =
-riddle11 = {'question' : question11 , 'answer' : answer11, 'escapesentence' :
+question11 = 'True or False- Rome has never hosted the Summer Olympic Games'
+answer11 = 'false'
+riddle11 = {'question' : question11 , 'answer' : answer11, 'escapesentence' : 'As you fumble around in the dark you stub your toe on something. As you reach down you realize its a flashlight!'}
 
-question12 =
-answer12 =
-riddle12 = {'question' : question12 , 'answer' : answer12, 'escapesentence' :
+question12 = 'What is the name of Nemos dad in Finding Nemo?'
+answer12 = 'Merlin'
+riddle12 = {'question' : question12 , 'answer' : answer12, 'escapesentence' : 'As you scan the room with a flashlight you find the door! You turn the knob and are realized to find its not locked. you are safe... for now.'}
 
-question13 =
-answer13 =
-riddle13 = {'question' : question13 , 'answer' : answer13, 'escapesentence' :
+question13 = 'How many Harry Potter books are there?'
+answer13 = '7'
+riddle13 = {'question' : question13 , 'answer' : answer13, 'escapesentence' : 'You can hear rain from outside! You must be getting close to getting out!! This room is filled with trap wires. You have to be careful to make sure you do not activate one!'}
 
-question14 =
-answer14 =
-riddle14 = {'question' : question14 , 'answer' : answer14, 'escapesentence' :
+question14 = 'Who is the current queen of england?'
+answer14 = 'elizabeth'
+riddle14 = {'question' : question14 , 'answer' : answer14, 'escapesentence' : 'You take a step forward and almost fall! You look down and see the the floor is covered in holes falling into a darkness. You have to make your way around without falling! can you do it?'}
 
-question15 =
-answer15 =
-riddle15 ={'question' : question15 , 'answer' : answer15, 'escapesentence' :
+question15 = 'What is Jay Gatsbys real name?'
+answer15 = 'james gatz'
+riddle15 ={'question' : question15 , 'answer' : answer15, 'escapesentence' : 'You have successfully made it through almost the entire room. There is just one more hole before the door. SPanning across it is a single piece of wood beam that you need to cross. Can you make it?'}
 
-question16 =
-answer16 =
-riddle16 = {'question' : question16 , 'answer' : answer16, 'escapesentence' :
+question16 = 'what is the fastest mammel in the world?'
+answer16 = 'cheetah'
+riddle16 = {'question' : question16 , 'answer' : answer16, 'escapesentence' : 'You made without falling! You find yourself in the final room. THere are windows showing the outside but they are covered in iron bars. The
 
-question17 =
+question17 = '
 answer17 =
 riddle17 = {'question' : question17 , 'answer' : answer17, 'escapesentence' :
 
-question18 =
+question18 = '
 answer18 =
 riddle18 = {'question' : question18 , 'answer' : answer18, 'escapesentence' :
 
 
-question = ['riddle1' , 'riddle2' , 'riddle3' , 'riddle4' , 'riddle5' , 'riddle6' , 'riddle7' , 'riddle8' , 'riddle9' , 'riddle10' , 'riddle11' , 'riddle12' , 'riddle13' , 'riddle14' , 'riddle15' , 'riddle16' , 'riddle17' , 'riddle18']
+question = [riddle1 , riddle2 , riddle3 , riddle4 , riddle5 , riddle6 , riddle7 , riddle8 , riddle9 , riddle10 , riddle11 , riddle12 , riddle13 , riddle14 , riddle15 , riddle16 , riddle17 , riddle18]
 
 counter = 0
 while True:
     answer = input(question[counter]['question']).lower()
-    if answer == question[counter]['answer']:
+    elif counter > 17:
+        break
+    elif answer == question[counter]['answer']:
         print(question[counter]['escapesentence'])
         counter += 1
-
     else:
         print('oh no! you have answered wrong! You turn around to see the hooded person behind you! They drag you back into the original room ')
         counter = 0
+
+print(
+
+
 
 
 
