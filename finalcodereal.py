@@ -1,3 +1,5 @@
+import sys
+
 #Starting the game with an introduction. This tells the player what the game is about and sets up the theme o the game.
 print("""You are walking alone at night when you hear a fall of footsteps behind you. You turn but see no one. You quicken your pace and continue to glance behind you. Just when you think you must have been just hearing things, you see a shadow. Before you can turn to get a good look your feel a cloth over your mouth and your vision goes black.""")
 
@@ -7,16 +9,13 @@ character = input("What is your name? ")
 #more introduction to the game as the character learns the object of the game
 print(f"{character} wakes up in a room blindfolded and tied to a chair. The room is empty and there is a door on the other side of the room. This is your chance to escape. The first thing you have to do is take off your blindfold.")
 
-class questions(object):
-    def __init__(self, q_text, a_text):
-        self.question == q_text
-        self.answer == a_text
-
 #In the game there are 18 total questions the player is asked. This part of the code sets up two variables for each question
 #there is a variable for the question and a variable for the answer
 #Once these variables are set there the riddle diccionary is created for each question where the key question is paired with the specific question
 #and the key answer is paired with a specific answer (the variables created for each question)
 #each diccionary also includes an escape sentence, which instructs the player what to do next once they get the question right
+
+
 question1 = 'What is the capitol of New Jersey'
 answer1 = 'trenton'
 riddle1 = {'question' : question1 , 'answer' : answer1 , 'escapesentence' : 'That is correct!! You have successfully taken off the blindfold. It is time to untie the ropes.'}
@@ -108,7 +107,7 @@ while True:
         break
     elif tries <= 0:
         print("Sorry you have lost the game!")
-        break
+        sys.exit()
 
     else:
         answer = input(question[counter]['question']).lower()
@@ -123,4 +122,8 @@ while True:
 print("""---
 Unfortunately your problems are not over yet. As you look up you are frightented to see the thing that captured you standing in the front yard. He turns and looks right at you. You feel a chill run through your bones. What will you do?""")
 
+class questions(object):
+    def __init__(self, q_text, a_text):
+        self.question == q_text
+        self.answer == a_text
 
