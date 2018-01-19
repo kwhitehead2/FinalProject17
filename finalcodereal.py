@@ -70,7 +70,7 @@ riddle15 ={'question' : question15 , 'answer' : answer15, 'escapesentence' : 'Yo
 
 question16 = 'what is the fastest mammel in the world?'
 answer16 = 'cheetah'
-riddle16 = {'question' : question16 , 'answer' : answer16, 'escapesentence' : 'You made without falling! You find yourself in the final room. THere are windows showing the outside but they are covered in iron bars. The
+riddle16 = {'question' : question16 , 'answer' : answer16, 'escapesentence' : 'You made without falling! You find yourself in the final room. THere are windows showing the outside but they are covered in iron bars. There are 3 locks on the door! Can you get them undone?'}
 
 question17 = '
 answer17 =
