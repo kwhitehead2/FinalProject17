@@ -1,13 +1,22 @@
+#Starting the game with an introduction. This tells the player what the game is about and sets up the theme o the game.
 print("""You are walking alone at night when you hear a fall of footsteps behind you. You turn but see no one. You quicken your pace and continue to glance behind you. Just when you think you must have been just hearing things, you see a shadow. Before you can turn to get a good look your feel a cloth over your mouth and your vision goes black.""")
 
+#this input asks the player his/her name and makes the answer the variable character so it can be used in the story line later
 character = input("What is your name? ")
 
+#more introduction to the game as the character learns the object of the game
 print(f"{character} wakes up in a room blindfolded and tied to a chair. The room is empty and there is a door on the other side of the room. This is your chance to escape. The first thing you have to do is take off your blindfold.")
 
 class questions(object):
     def __init__(self, q_text, a_text):
         self.question == q_text
         self.answer == a_text
+
+#In the game there are 18 total questions the player is asked. This part of the code sets up two variables for each question
+#there is a variable for the question and a variable for the answer
+#Once these variables are set there the riddle diccionary is created for each question where the key question is paired with the specific question
+#and the key answer is paired with a specific answer (the variables created for each question)
+#each diccionary also includes an escape sentence, which instructs the player what to do next once they get the question right
 question1 = 'What is the capitol of New Jersey'
 answer1 = 'trenton'
 riddle1 = {'question' : question1 , 'answer' : answer1 , 'escapesentence' : 'That is correct!! You have successfully taken off the blindfold. It is time to untie the ropes.'}
@@ -53,7 +62,7 @@ answer11 = 'false'
 riddle11 = {'question' : question11 , 'answer' : answer11, 'escapesentence' : 'As you fumble around in the dark you stub your toe on something. As you reach down you realize its a flashlight!'}
 
 question12 = 'What is the name of Nemos dad in Finding Nemo?'
-answer12 = 'Merlin'
+answer12 = 'merlin'
 riddle12 = {'question' : question12 , 'answer' : answer12, 'escapesentence' : 'As you scan the room with a flashlight you find the door! You turn the knob and are realized to find its not locked. you are safe... for now.'}
 
 question13 = 'How many Harry Potter books are there?'
@@ -72,78 +81,46 @@ question16 = 'what is the fastest mammel in the world?'
 answer16 = 'cheetah'
 riddle16 = {'question' : question16 , 'answer' : answer16, 'escapesentence' : 'You made without falling! You find yourself in the final room. THere are windows showing the outside but they are covered in iron bars. There are 3 locks on the door! Can you get them undone?'}
 
-question17 = '
-answer17 =
-riddle17 = {'question' : question17 , 'answer' : answer17, 'escapesentence' :
+question17 = 'Who is the richest man in the world currently?'
+answer17 = 'jeff bozos'
+riddle17 = {'question' : question17 , 'answer' : answer17, 'escapesentence' : 'You successful got off the first 2 locks! Only two to go and you will be free!'}
 
-question18 = '
-answer18 =
-riddle18 = {'question' : question18 , 'answer' : answer18, 'escapesentence' :
+question18 = 'who is the current prime minister of Canada?'
+answer18 = 'justin trudeau'
+riddle18 = {'question' : question18 , 'answer' : answer18, 'escapesentence' : 'You got the final lock off!! You are free!! The sun is shining bright and you take a second to revel in your freedom.'}
 
-
+#in order to reference each question and answer without running a specific code for each one, this list is made up of all the diccionaries
+#that way by referencing just a number in the list question, a specific diccionary and question and answer set can be called
 question = [riddle1 , riddle2 , riddle3 , riddle4 , riddle5 , riddle6 , riddle7 , riddle8 , riddle9 , riddle10 , riddle11 , riddle12 , riddle13 , riddle14 , riddle15 , riddle16 , riddle17 , riddle18]
 
+#in the game if a player gets a question wrong they will be required to begin from the first question
+#the variable counter represents which question the player is on. This counter begins at zero to represent the position of 'riddle1' in the question list
 counter = 0
+
+#if a player gets a question wrong they return to the begginning but they will only be allowed to get three wrong before losing the game
+#the variable 'tries' is set at 3 to represent the number of attempts the player has at the beginning of the game
+tries = 3
+
+#The while loop w
 while True:
-    answer = input(question[counter]['question']).lower()
-    elif counter > 17:
+    print(f"you have {tries} attempts left")
+    if counter > 17:
         break
-    elif answer == question[counter]['answer']:
-        print(question[counter]['escapesentence'])
-        counter += 1
-    else:
-        print('oh no! you have answered wrong! You turn around to see the hooded person behind you! They drag you back into the original room ')
-        counter = 0
-
-print(
-
-
-
-
-
-"""
-tries=4
-if tries>0:
-elif tries<=0:
-    print("You are out of tries. Game Over.")
-
-def enter(x):
-
-
-counter=0
-while True:
-    answer=input(question[counter][0]).lower()
-    if answer == 'Jenna Prasad':
-        print(f"You are correct {character}!')
-        counter += 1
+    elif tries <= 0:
+        print("Sorry you have lost the game!")
         break
+
     else:
-        print("you are incorrect. try again")
-        tries-=1
-        enter(level1)
-print('---')
-print(f'You have now untied the ropes. {character} can see the key to the door on a table. {character} picks up the key. The final task is to open the door")
-while True:
-    answer2=input(question[counter][1]).lower()
-    if answer=="insert answer here":
-        print
-
-else:
-    print("you are incorrect. try again")
-
-print("Sorry you have failed to escape the house")
-
-
-
-"""
-"""counter = 0
-while counter == 1:
-    answer = input(question[counter][0]).lower()
-    if answer == question[counter][1]:
-            print("You are correct! you have gotten up from the chair. The next step is to open the door")
-            counter == 2
-    else:
-            print("you are incorrect. try again")
+        answer = input(question[counter]['question']).lower()
+        if answer == question[counter]['answer']:
+            print(question[counter]['escapesentence'])
+            counter += 1
+        else:
+            print('oh no! you have answered wrong! You turn around to see the hooded person behind you! They drag you back into the original room ')
             counter = 0
-for i in range(4):
-    """
+            tries -= 1
+
+print("""---
+Unfortunately your problems are not over yet. As you look up you are frightented to see the thing that captured you standing in the front yard. He turns and looks right at you. You feel a chill run through your bones. What will you do?""")
+
+
