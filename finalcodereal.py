@@ -96,8 +96,8 @@ question = [riddle1 , riddle2 , riddle3 , riddle4 , riddle5 , riddle6 , riddle7 
 counter = 0
 
 #if a player gets a question wrong they return to the begginning but they will only be allowed to get 5 wrong before losing the game
-#the variable 'tries' is set at 5 to represent the number of attempts the player has at the beginning of the game
-tries = 5
+#the variable 'tries' is set at 8 to represent the number of attempts the player has at the beginning of the game
+tries = 8
 
 #The while loop is being used to ask the questions set up in the diccionaries in a loop. It is set as 'while true' so after a question
 #is asked the loop will continue
