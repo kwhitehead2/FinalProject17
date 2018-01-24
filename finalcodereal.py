@@ -19,7 +19,7 @@ question1 = 'What is the capitol of New Jersey'
 answer1 = 'trenton'
 riddle1 = {'question' : question1 , 'answer' : answer1 , 'escapesentence' : 'That is correct!! You have successfully taken off the blindfold. It is time to untie the ropes.'}
 
-question2 = 'Who won the 2001 superbowl'
+question2 = 'Who won the 2001 superbowl?'
 answer2 = 'ravens'
 riddle2 = {'question' : question2 , 'answer' : answer2, 'escapesentence' : 'You are correct! you have now untied the ropes. You can see the key to the door on a table. You pick up the key. The final task is to oopen the door'}
 
@@ -51,8 +51,8 @@ question9 = 'Tony winner Ben Platt starred in what Broadway Show in the last yea
 answer9 = 'dear evan hansen'
 riddle9 = {'question' : question9 , 'answer' : answer9, 'escapesentence' : 'The pin is a perfect fit! You jump back as the mirror wall swings open to reveal yet another room!'}
 
-question10 = 'Who was the first superhero created?'
-answer10 = 'superman'
+question10 = 'What is the biggest country in the world?'
+answer10 = 'russia'
 riddle10 = {'question' : question10 , 'answer' : answer10, 'escapesentence' : 'You step into yet another room and the door slams shut behind you. You are in pitch dark. YOu hold your hand up to your face and can not see it through the darkness. The first step is to find any source of light.'}
 
 question11 = 'True or False- Rome has never hosted the Summer Olympic Games'
@@ -75,8 +75,8 @@ question15 = 'What is Jay Gatsbys real name?'
 answer15 = 'james gatz'
 riddle15 ={'question' : question15 , 'answer' : answer15, 'escapesentence' : 'You have successfully made it through almost the entire room. There is just one more hole before the door. SPanning across it is a single piece of wood beam that you need to cross. Can you make it?'}
 
-question16 = 'what is the fastest mammel in the world?'
-answer16 = 'cheetah'
+question16 = 'What is the largest organ in your body?'
+answer16 = 'skin'
 riddle16 = {'question' : question16 , 'answer' : answer16, 'escapesentence' : 'You made without falling! You find yourself in the final room. THere are windows showing the outside but they are covered in iron bars. There are 3 locks on the door! Can you get them undone?'}
 
 question17 = 'Who is the richest man in the world currently?'
@@ -158,6 +158,11 @@ def attack1():
         print(f"{opponent.name}'s life is now {opponent.life}! You haven't defeated him yet! Keep attacking!")
         print(f"{player.name}'s life is now {player.life}! Be careful! You have to defeat your opponent before you die!")
 
+#this function allows the player to run instead of attack. If the player chooses not to attack they will lose life
+def run1():
+    player.life -=20
+    print(f"{player.name} tried to run and fell! You get back up, but now {player.name}r life is {player.life}")
+
 #This while loop will continue the attack until either the player or the opponent loses
 while True:
 #if the players life reaches 0 the player loses and the games ends
@@ -170,15 +175,14 @@ while True:
         break
 #if both the player and opponents life is greater then 0 an imput asks if the player wants to attack and sets this answer as the action variable
 #if the answer is yes then the attack function above is called
-#if the answer is no the player will try to run and lose the game
+#if the answer is no the player will try to run and lose life
 #if the player does no put yes or no the player will be asked to put a valid input of yes or no
     else:
         action = input("Do you want to attack. (yes or no)")
         if action == "yes":
             attack1()
         elif action == "no":
-            print("You try to run but you trip and fall. Your opponent gets to you! You have lost the game!")
-            break
+            run1()
         else:
             print("invalid input please answer yes or no")
 
