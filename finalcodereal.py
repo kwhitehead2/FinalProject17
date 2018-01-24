@@ -15,14 +15,13 @@ print(f"{character} wakes up in a room blindfolded and tied to a chair. The room
 #and the key answer is paired with a specific answer (the variables created for each question)
 #each diccionary also includes an escape sentence, which instructs the player what to do next once they get the question right
 
-
 question1 = 'What is the capitol of New Jersey'
 answer1 = 'trenton'
 riddle1 = {'question' : question1 , 'answer' : answer1 , 'escapesentence' : 'That is correct!! You have successfully taken off the blindfold. It is time to untie the ropes.'}
 
 question2 = 'Who won the 2001 superbowl'
 answer2 = 'ravens'
-riddle2 = {f'question' : question2 , 'answer' : answer2, 'escapesentence' : 'You are correct {character}! you have now untied the ropes. {character} can see the key to the door on a table. {character} picks up the key. The final task is to oopen the door'}
+riddle2 = {'question' : question2 , 'answer' : answer2, 'escapesentence' : 'You are correct! you have now untied the ropes. You can see the key to the door on a table. You pick up the key. The final task is to oopen the door'}
 
 question3 = 'Who starred as Belle in Disney/s live action Beauty and the Beast'
 answer3 = 'emma watson'
@@ -82,7 +81,7 @@ riddle16 = {'question' : question16 , 'answer' : answer16, 'escapesentence' : 'Y
 
 question17 = 'Who is the richest man in the world currently?'
 answer17 = 'jeff bozos'
-riddle17 = {'question' : question17 , 'answer' : answer17, 'escapesentence' : 'You successful got off the first 2 locks! Only two to go and you will be free!'}
+riddle17 = {'question' : question17 , 'answer' : answer17, 'escapesentence' : 'You successful got off the first 2 locks! Only 1 to go and you will be free!'}
 
 question18 = 'who is the current prime minister of Canada?'
 answer18 = 'justin trudeau'
@@ -96,34 +95,97 @@ question = [riddle1 , riddle2 , riddle3 , riddle4 , riddle5 , riddle6 , riddle7 
 #the variable counter represents which question the player is on. This counter begins at zero to represent the position of 'riddle1' in the question list
 counter = 0
 
-#if a player gets a question wrong they return to the begginning but they will only be allowed to get three wrong before losing the game
-#the variable 'tries' is set at 3 to represent the number of attempts the player has at the beginning of the game
-tries = 3
+#if a player gets a question wrong they return to the begginning but they will only be allowed to get 5 wrong before losing the game
+#the variable 'tries' is set at 5 to represent the number of attempts the player has at the beginning of the game
+tries = 5
 
-#The while loop w
+#The while loop is being used to ask the questions set up in the diccionaries in a loop. It is set as 'while true' so after a question
+#is asked the loop will continue
 while True:
+#the first thing that will happen each time is a sentence will print to tell the player how many tries they have left
     print(f"you have {tries} attempts left")
+#if the counter number (aka the question number) reaches higher then 17 it means that the plaey has passed this level in the game
+#this if statement will break the loop if this is the case so the player can move on to the next part
     if counter > 17:
         break
+#the elif following concerns the amount of tries the player has used
+#if the player has used up all their tries the game will be over and the code will end with sys.exit()
     elif tries <= 0:
         print("Sorry you have lost the game!")
         sys.exit()
-
+#if the player has enough tries and the counter is less than 17 then the player will be prompted to answer a question
+#this answer is set as a variable answer using the input function below
     else:
         answer = input(question[counter]['question']).lower()
+#If the answer is correct the 'escape sentence' from the dictionaries above will be printed and 1 will be added to the counter variable
+#this means that when the loop begins again the next question will be asked
         if answer == question[counter]['answer']:
             print(question[counter]['escapesentence'])
+            print("---")
             counter += 1
+#if the player gives the wrong answer then then the following sentance will be printed and the counter is set to 0
+#this means that the player has to start from the beginning of the game
         else:
             print('oh no! you have answered wrong! You turn around to see the hooded person behind you! They drag you back into the original room ')
             counter = 0
+#one is also subtracted from tries so that when the loops goes back it will print one less try
             tries -= 1
 
+#once the player has answered all the questions correctly they will be set into the second section of the game
 print("""---
 Unfortunately your problems are not over yet. As you look up you are frightented to see the thing that captured you standing in the front yard. He turns and looks right at you. You feel a chill run through your bones. What will you do?""")
 
-class questions(object):
-    def __init__(self, q_text, a_text):
-        self.question == q_text
-        self.answer == a_text
+#because the function later uses random integers this first imports randint function so I can use it later
+from random import randint
+
+#this class is used to set temporary names and lives for the characters. The characters will be fighting and losing life so the class is needed
+class Character(object):
+    def __init__(self,name, life):
+        self.name = name
+        self.life = life
+
+#these two variables define the player and the opponent as part of the class above
+#Both characters begin with lives at 100
+player = Character("you", 100)
+opponent = Character("opponent", 100)
+
+#This is defining an attack function
+#when this function is called the player will lose life of a random value from 0-20
+#the opponent will lose life of a random value from 0-25
+def attack1():
+        player.life -= randint(0,20)
+        opponent.life -= randint(0,25)
+        print(f"{opponent.name}'s life is now {opponent.life}! You haven't defeated him yet! Keep attacking!")
+        print(f"{player.name}'s life is now {player.life}! Be careful! You have to defeat your opponent before you die!")
+
+#This while loop will continue the attack until either the player or the opponent loses
+while True:
+#if the players life reaches 0 the player loses and the games ends
+    if player.life <= 0:
+        print(f"Oh no it looks like your {opponent.name} got the best of you! You have lost the game")
+        break
+#if the opponents life reaches 0 the player wins the game
+    elif opponent.life <= 0:
+        print(f"Congrats! You have defeated your {opponent.name}! You rush by him and run home safe and sound! Be more careful walking around alone next time")
+        break
+#if both the player and opponents life is greater then 0 an imput asks if the player wants to attack and sets this answer as the action variable
+#if the answer is yes then the attack function above is called
+#if the answer is no the player will try to run and lose the game
+#if the player does no put yes or no the player will be asked to put a valid input of yes or no
+    else:
+        action = input("Do you want to attack. (yes or no)")
+        if action == "yes":
+            attack1()
+        elif action == "no":
+            print("You try to run but you trip and fall. Your opponent gets to you! You have lost the game!")
+            break
+        else:
+            print("invalid input please answer yes or no")
+
+
+
+
+
+
+
 
