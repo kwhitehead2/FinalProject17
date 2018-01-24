@@ -15,23 +15,23 @@ print(f"{character} wakes up in a room blindfolded and tied to a chair. The room
 #and the key answer is paired with a specific answer (the variables created for each question)
 #each diccionary also includes an escape sentence, which instructs the player what to do next once they get the question right
 
-question1 = 'What is the capitol of New Jersey'
+question1 = 'What is the capital of New Jersey? '
 answer1 = 'trenton'
 riddle1 = {'question' : question1 , 'answer' : answer1 , 'escapesentence' : 'That is correct!! You have successfully taken off the blindfold. It is time to untie the ropes.'}
 
-question2 = 'Who won the 2001 superbowl?'
+question2 = 'Who won the 2001 superbowl? '
 answer2 = 'ravens'
 riddle2 = {'question' : question2 , 'answer' : answer2, 'escapesentence' : 'You are correct! you have now untied the ropes. You can see the key to the door on a table. You pick up the key. The final task is to oopen the door'}
 
-question3 = 'Who starred as Belle in Disney/s live action Beauty and the Beast'
+question3 = 'Who starred as Belle in Disney/s live action Beauty and the Beast? '
 answer3 = 'emma watson'
 riddle3 = {'question' : question3 , 'answer' : answer3, 'escapesentence' : 'You have successfully opened the door. But stepping through the door, you find yourself in another room. This room is filled with doors. The first step is to try to open the doors'}
 
-question4 = 'Who is the Marvel superhero played by Chris Hemsworth?'
+question4 = 'Who is the Marvel superhero played by Chris Hemsworth? '
 answer4 = 'thor'
 riddle4 = {'question' : question4 , 'answer' : answer4, 'escapesentence' : 'Unfortunately all the doors are locked, you need to find the key. Looking around, you see a pair of keys hanging from a hook just above your reach. Will you be able to reach them?'}
 
-question5 = 'Who created Carpool Karaoke?'
+question5 = 'Who created Carpool Karaoke? '
 answer5 = 'james corden'
 riddle5 = {'question' : question5 , 'answer' : answer5, 'escapesentence' : 'You successfully reached the keys! The final step is to get out of this room? But what door do you pick?'}
 
@@ -47,43 +47,43 @@ question8 = 'What late night comedy show first aired in 1975?'
 answer8 = 'saturday night live'
 riddle8 = {'question' : question8 , 'answer' : answer8, 'escapesentence' : 'Just as you are about to give up, you realize you have a pin on your shirt that will fit into the crack!. You take it off and try to push it into the crack'}
 
-question9 = 'Tony winner Ben Platt starred in what Broadway Show in the last year'
+question9 = 'Tony winner Ben Platt starred in what Broadway Show in the last year? '
 answer9 = 'dear evan hansen'
 riddle9 = {'question' : question9 , 'answer' : answer9, 'escapesentence' : 'The pin is a perfect fit! You jump back as the mirror wall swings open to reveal yet another room!'}
 
-question10 = 'What is the biggest country in the world?'
+question10 = 'What is the biggest country in the world? '
 answer10 = 'russia'
 riddle10 = {'question' : question10 , 'answer' : answer10, 'escapesentence' : 'You step into yet another room and the door slams shut behind you. You are in pitch dark. YOu hold your hand up to your face and can not see it through the darkness. The first step is to find any source of light.'}
 
-question11 = 'True or False- Rome has never hosted the Summer Olympic Games'
+question11 = 'True or False- Rome has never hosted the Summer Olympic Games. '
 answer11 = 'false'
 riddle11 = {'question' : question11 , 'answer' : answer11, 'escapesentence' : 'As you fumble around in the dark you stub your toe on something. As you reach down you realize its a flashlight!'}
 
-question12 = 'What is the name of Nemos dad in Finding Nemo?'
+question12 = 'What is the name of Nemos dad in Finding Nemo? '
 answer12 = 'merlin'
 riddle12 = {'question' : question12 , 'answer' : answer12, 'escapesentence' : 'As you scan the room with a flashlight you find the door! You turn the knob and are realized to find its not locked. you are safe... for now.'}
 
-question13 = 'How many Harry Potter books are there?'
+question13 = 'How many Harry Potter books are there? '
 answer13 = '7'
 riddle13 = {'question' : question13 , 'answer' : answer13, 'escapesentence' : 'You can hear rain from outside! You must be getting close to getting out!! This room is filled with trap wires. You have to be careful to make sure you do not activate one!'}
 
-question14 = 'Who is the current queen of england?'
+question14 = 'Who is the current queen of England? '
 answer14 = 'elizabeth'
 riddle14 = {'question' : question14 , 'answer' : answer14, 'escapesentence' : 'You take a step forward and almost fall! You look down and see the the floor is covered in holes falling into a darkness. You have to make your way around without falling! can you do it?'}
 
-question15 = 'What is Jay Gatsbys real name?'
+question15 = 'What is Jay Gatsbys real name? '
 answer15 = 'james gatz'
 riddle15 ={'question' : question15 , 'answer' : answer15, 'escapesentence' : 'You have successfully made it through almost the entire room. There is just one more hole before the door. SPanning across it is a single piece of wood beam that you need to cross. Can you make it?'}
 
-question16 = 'What is the largest organ in your body?'
+question16 = 'What is the largest organ in your body? '
 answer16 = 'skin'
 riddle16 = {'question' : question16 , 'answer' : answer16, 'escapesentence' : 'You made without falling! You find yourself in the final room. THere are windows showing the outside but they are covered in iron bars. There are 3 locks on the door! Can you get them undone?'}
 
-question17 = 'Who is the richest man in the world currently?'
+question17 = 'Who is the richest man in the world currently? '
 answer17 = 'jeff bozos'
 riddle17 = {'question' : question17 , 'answer' : answer17, 'escapesentence' : 'You successful got off the first 2 locks! Only 1 to go and you will be free!'}
 
-question18 = 'who is the current prime minister of Canada?'
+question18 = 'who is the current prime minister of Canada? '
 answer18 = 'justin trudeau'
 riddle18 = {'question' : question18 , 'answer' : answer18, 'escapesentence' : 'You got the final lock off!! You are free!! The sun is shining bright and you take a second to revel in your freedom.'}
 
