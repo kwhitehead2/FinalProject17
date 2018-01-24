@@ -13,3 +13,7 @@ https://www.draw.io/#G1SFcpt8i2CbG9U9MehHiJGWNKDxFBK6N5
 link to source:
 https://docs.python.org/3/tutorial/classes.html
 
+
+link to google slides:
+https://docs.google.com/presentation/d/1s3FemjVIeJbzBWC7gGZQuAXZ9-tJyzKdv0lWKoJS9Ks/edit#slide=id.g3276a0a889_0_138
+
